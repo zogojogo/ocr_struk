@@ -1,4 +1,4 @@
-import cv2, json
+import cv2, json, argparse
 from entity.pairing import entity_pairing, get_paired, split_pairs, flatten
 from entity.item import draw_level, to_json
 from entity.transcript import clean_transcripts, vis_text
@@ -36,10 +36,10 @@ def text_to_img(img, levels, coords_data, transcripts):
     full_img = concat_imgs([img, img_c, img_text])
     return full_img
 
-def main():
-    coord_path = "./inference_results/det_results.txt"
-    transcript_path = "./inference_results/rec_result.txt"
-    img_path = "./struk_3.jpg"
+def main(args):
+    coord_path = args.coord_path
+    transcript_path = args.transcript_path
+    img_path = args.img_path
     second = 1000
 
     img = cv2.imread(img_path)
@@ -51,4 +51,12 @@ def main():
     # cv2.waitKey(10*second)
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser()
+
+    parser.add_argument("--img_path", type=str)
+    parser.add_argument("--coord_path", type=str, default="./inference_results/det_results.txt")
+    parser.add_argument("--transcript_path", type=str, default="./inference_results/rec_result.txt")
+
+    args = parser.parse_args()
+
+    main(args)

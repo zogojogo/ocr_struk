@@ -1,3 +1,5 @@
 /PaddleOCR
 /myenv
 /__pycache__
+/rec_crnn_inference
+/det_r50_vd_inference
