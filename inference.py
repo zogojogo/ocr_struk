@@ -64,20 +64,20 @@ def crop_img(img, box):
     x,y,w,h = rect
     croped = img[y:y+h, x:x+w].copy()
 
-    ## mask
-    box = box - box.min(axis=0)
-    mask = np.zeros(croped.shape[:2], np.uint8)
-    cv2.drawContours(mask, [box], -1, (255, 255, 255), -1, cv2.LINE_AA)
+    # ## mask
+    # box = box - box.min(axis=0)
+    # mask = np.zeros(croped.shape[:2], np.uint8)
+    # cv2.drawContours(mask, [box], -1, (255, 255, 255), -1, cv2.LINE_AA)
 
-    ## bit-op
-    dst = cv2.bitwise_and(croped, croped, mask=mask)
+    # ## bit-op
+    # dst = cv2.bitwise_and(croped, croped, mask=mask)
 
-    ## add the white background
-    bg = np.ones_like(croped, np.uint8)*255
-    cv2.bitwise_not(bg,bg, mask=mask)
-    dst2 = bg+ dst
+    # ## add the white background
+    # bg = np.ones_like(croped, np.uint8)*255
+    # cv2.bitwise_not(bg,bg, mask=mask)
+    # dst2 = bg+ dst
 
-    return dst2
+    return croped
 
 def recognition(args, text_recognizer):
     img_file = args.image_path

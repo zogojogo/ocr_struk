@@ -15,7 +15,7 @@ Go to repository folder :
   cd ocr_struk
 ```
 
-Init environment:
+I recommend to create a virtual environment first. After that, init environment:
 ```bash
   sh InitApp.sh
 ```
