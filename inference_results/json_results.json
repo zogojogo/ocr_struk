@@ -1,0 +1,75 @@
+{
+  "address": "JL.MERDEKA NO.25",
+  "number": "TELP. 087775189004",
+  "info": [
+    "TU",
+    "LHOKSEUMANE",
+    "JL.MERDEKA NO.25",
+    "LHOKSEUMAHE",
+    "TELP. 087775189004",
+    "EAT IN",
+    "TERIMA KASI"
+  ],
+  "item": [
+    {
+      "qty": "1",
+      "name": "CHICKEN HCC, 1PCS",
+      "price": "13,636",
+      "total": "13,636"
+    },
+    {
+      "qty": "1",
+      "name": "Rice",
+      "price": "5,909",
+      "total": "5,909"
+    },
+    {
+      "qty": "1",
+      "name": "Colonel Burger",
+      "price": "12.727",
+      "total": "12.727"
+    },
+    {
+      "qty": "1",
+      "name": "PEPSI LARGE",
+      "price": "10,909",
+      "total": "10,909"
+    },
+    {
+      "qty": null,
+      "name": "OUALTINE",
+      "price": "10,000",
+      "total": "10,000"
+    },
+    {
+      "qty": null,
+      "name": "SUB TOTAL",
+      "price": "53,18L",
+      "total": "53,18L"
+    },
+    {
+      "qty": null,
+      "name": "P.REST 10:",
+      "price": "5,318",
+      "total": "5,318"
+    },
+    {
+      "qty": null,
+      "name": "TOtaL",
+      "price": "50900",
+      "total": "50900"
+    },
+    {
+      "qty": null,
+      "name": "Cash",
+      "price": "100,000",
+      "total": "100,000"
+    },
+    {
+      "qty": null,
+      "name": "KEMBALI",
+      "price": "41,500",
+      "total": "41,500"
+    }
+  ]
+}

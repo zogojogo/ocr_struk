@@ -47,6 +47,12 @@ def main(args):
     # img_c, lev_coords = level_to_img(img, levels, coords_data)
     full_img = text_to_img(img, levels, coords_data, transcripts)
 
+    r_json = to_json(levels, transcripts)
+    # print(r_json)
+    with open(args.json_path, "w") as j:
+        json.dump(r_json, j, indent=2)
+        j.close()
+
     cv2.imwrite("./inference_results/full_img.jpg", full_img)
     # cv2.waitKey(10*second)
 
@@ -56,6 +62,7 @@ if __name__ == "__main__":
     parser.add_argument("--img_path", type=str)
     parser.add_argument("--coord_path", type=str, default="./inference_results/det_results.txt")
     parser.add_argument("--transcript_path", type=str, default="./inference_results/rec_result.txt")
+    parser.add_argument("--json_path", type=str, default="./inference_results/json_results.json")
 
     args = parser.parse_args()
 

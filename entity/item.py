@@ -97,3 +97,5 @@ def to_json(levels, transcripts):
             else:
                 inf = " ".join([transcripts[lev] for lev in level])
                 responses["info"].append(inf)
+    
+    return responses
