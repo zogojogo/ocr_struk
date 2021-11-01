@@ -1,5 +1,5 @@
 import cv2
-from .tuls import get_optimal_font_scale, is_address, is_phone, is_item, remove_punc
+from .tuls import is_address, is_phone, is_item, remove_punc, is_prices
 
 def draw_level(image, levels, coords, scale=1):
     color = (255, 0, 0)
@@ -67,18 +67,22 @@ def to_json(levels, transcripts):
     item_keys = ['qty', 'name', 'price', 'total']
 
     for level in levels:
-        info = True
         for lev in level:
+
             if is_address(transcripts[lev]) and responses["address"] is None:
                 responses["address"] = " ".join([transcripts[x] for x in level])
-                info = False
+
             elif is_phone(transcripts[lev]) and responses["number"] is None:
                 responses["number"] = " ".join([transcripts[x] for x in level])
-                info = False
-        if len(level) > 1 and info:
-            item = find_item(level, transcripts)
-            response = {x:y for x,y in zip(item_keys, item)}
-            responses['item'].append(response)
+
+        if len(level) > 1:
+            if is_prices(" ".join([remove_punc(transcripts[s], puncs=".", replace="") for s in level])) and len(level) == 2:
+                responses[transcripts[level[0]]] = transcripts[level[1]]
+            else:
+                item = find_item(level, transcripts)
+                response = {x:y for x,y in zip(item_keys, item)}
+                responses['item'].append(response)
+
         else :
             info = transcripts[level[0]]
             check = is_item(remove_punc(info, puncs=".,", replace=""))

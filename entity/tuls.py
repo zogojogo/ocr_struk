@@ -67,6 +67,13 @@ def is_item(s):
         return "qty_duluan"
     return "bukan_item"
 
+def is_prices(s):
+    pattern = "^([a-zA-Z:]*) (\d*)"
+    prices = False
+    if re.search(pattern, s):
+        prices = True
+    return prices
+
 def remove_punc(s, puncs=":", replace=" "):
     pattern = "[{}]+\ *".format(puncs)
     clean = re.sub(pattern.encode('unicode-escape').decode().replace('\\\\', '\\'), replace, s)

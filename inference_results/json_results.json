@@ -34,42 +34,12 @@
       "name": "PEPSI LARGE",
       "price": "10,909",
       "total": "10,909"
-    },
-    {
-      "qty": null,
-      "name": "OUALTINE",
-      "price": "10,000",
-      "total": "10,000"
-    },
-    {
-      "qty": null,
-      "name": "SUB TOTAL",
-      "price": "53,18L",
-      "total": "53,18L"
-    },
-    {
-      "qty": null,
-      "name": "P.REST 10:",
-      "price": "5,318",
-      "total": "5,318"
-    },
-    {
-      "qty": null,
-      "name": "TOtaL",
-      "price": "50900",
-      "total": "50900"
-    },
-    {
-      "qty": null,
-      "name": "Cash",
-      "price": "100,000",
-      "total": "100,000"
-    },
-    {
-      "qty": null,
-      "name": "KEMBALI",
-      "price": "41,500",
-      "total": "41,500"
     }
-  ]
+  ],
+  "OUALTINE": "10,000",
+  "SUB TOTAL": "53,18L",
+  "P.REST 10:": "5,318",
+  "TOtaL": "50900",
+  "Cash": "100,000",
+  "KEMBALI": "41,500"
 }
