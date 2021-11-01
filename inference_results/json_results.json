@@ -1,45 +1,41 @@
 {
-  "address": "JL.MERDEKA NO.25",
-  "number": "TELP. 087775189004",
+  "address": "JL.RE MARTADINATA RAYA RT.001 RW.05,1 15",
+  "number": "RE MARTADINATA 08118144003",
   "info": [
-    "TU",
-    "LHOKSEUMANE",
-    "JL.MERDEKA NO.25",
-    "LHOKSEUMAHE",
-    "TELP. 087775189004",
-    "EAT IN",
-    "TERIMA KASI"
+    "NA",
+    "JAKARTA UTARA",
+    "RE MARTADINATA 08118144003",
+    "JL.RE MARTADINATA RAYA RT.001 RW.05,1 15",
+    "411",
+    "I.SAKU-POINKU-TRXID:TWIA2110071411400102",
+    "NO:xxxxxxxxx0867,PURCHASE:28.000",
+    "CEK PEROLEHAN POIN/STAMP/LUCKY DI APPS PDINKU",
+    "LAYANAN KONSUMEN SMS 0811 1500 280",
+    "CALL 1500200-KONTAKGINDOMARET.CO.I"
   ],
   "item": [
     {
-      "qty": "1",
-      "name": "CHICKEN HCC, 1PCS",
-      "price": "13,636",
-      "total": "13,636"
+      "qty": null,
+      "name": null,
+      "price": "3008/FIKRI",
+      "total": "AB/02"
     },
     {
       "qty": "1",
-      "name": "Rice",
-      "price": "5,909",
-      "total": "5,909"
+      "name": "GILLETE CATR.VECTOR2",
+      "price": "26000",
+      "total": "26,000"
     },
     {
       "qty": "1",
-      "name": "Colonel Burger",
-      "price": "12.727",
-      "total": "12.727"
-    },
-    {
-      "qty": "1",
-      "name": "PEPSI LARGE",
-      "price": "10,909",
-      "total": "10,909"
+      "name": "XON-CE VIT.C5OOMG2'S",
+      "price": "2000",
+      "total": "2,000"
     }
   ],
-  "OUALTINE": "10,000",
-  "SUB TOTAL": "53,18L",
-  "P.REST 10:": "5,318",
-  "TOtaL": "50900",
-  "Cash": "100,000",
-  "KEMBALI": "41,500"
+  "HARGA JUAL:": "28,000",
+  "TOTAL:": "28,000",
+  "NON TUNAI:": "28,000",
+  "PPN": "DPP=25,455 PPN=2,545",
+  "ID POINKU": "XXXXxXXx1106"
 }

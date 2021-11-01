@@ -67,15 +67,18 @@ def to_json(levels, transcripts):
     item_keys = ['qty', 'name', 'price', 'total']
 
     for level in levels:
+        info = True
         for lev in level:
 
             if is_address(transcripts[lev]) and responses["address"] is None:
                 responses["address"] = " ".join([transcripts[x] for x in level])
+                info  = False
 
             elif is_phone(transcripts[lev]) and responses["number"] is None:
                 responses["number"] = " ".join([transcripts[x] for x in level])
+                info = False
 
-        if len(level) > 1:
+        if len(level) > 1 and info:
             if is_prices(" ".join([remove_punc(transcripts[s], puncs=".", replace="") for s in level])) and len(level) == 2:
                 responses[transcripts[level[0]]] = transcripts[level[1]]
             else:
